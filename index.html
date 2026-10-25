@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Moto 6 - Мото услуги</title>
+    <style>
+        :root {
+            --primary: #ff6600;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --gray: #2a2a2a;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 20px 0;
+            border-bottom: 4px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .logo span {
+            color: var(--primary);
+        }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #ccc;
+        }
+        .services {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid transparent;
+        }
+        .card.active {
+            border-top-color: var(--primary);
+        }
+        .card.active:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .card.upcoming {
+            opacity: 0.75;
+            background: #fafafa;
+        }
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        .card-badge {
+            display: inline-block;
+            background-color: #e0e0e0;
+            color: #666;
+            padding: 3px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            align-self: flex-start;
+            margin-bottom: 15px;
+        }
+        .card-badge.available {
+            background-color: #e6f4ea;
+            color: #137333;
+        }
+        .card-badge.soon {
+            background-color: #feefe3;
+            color: #b06000;
+        }
+        .card p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e05500;
+        }
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: #333;
+            cursor: not-allowed;
+        }
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .footer-about h3, .footer-contact h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid var(--gray);
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Turtle Moto <span>6</span></a>
+            <nav>
+                <a href="index.html">Начало</a>
+                <a href="index.html#services">Услуги</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Turtle Moto 6</h1>
+            <p>Професионални мото услуги и грижа за вашия мотор</p>
+        </div>
+    </section>
+
+    <section class="container services" id="services">
+        <h2 class="section-title">Нашите Услуги</h2>
+        <div class="grid">
+            
+            <!-- Гаражи -->
+            <div class="card active">
+                <div class="card-content">
+                    <span class="card-badge available">Налични: 5 броя</span>
+                    <h3 class="card-title">Гаражи и паркоместа</h3>
+                    <p>Сигурно и сухо място за вашия мотоциклет. Споделен паркинг с контролиран достъп и отлични условия.</p>
+                    <a href="garages.html" class="btn">Виж детайли</a>
+                </div>
+            </div>
+
+            <!-- Ремарке -->
+            <div class="card active">
+                <div class="card-content">
+                    <span class="card-badge available">Налично: 1 брой</span>
+                    <h3 class="card-title">Наем на ремарке за мотори</h3>
+                    <p>Надеждно и сигурно ремарке, специално оборудвано за превоз на мотоциклети до всяка точка.</p>
+                    <a href="trailer.html" class="btn">Виж детайли</a>
+                </div>
+            </div>
+
+            <!-- Pit Bike -->
+            <div class="card upcoming">
+                <div class="card-content">
+                    <span class="card-badge soon">Очаквайте скоро</span>
+                    <h3 class="card-title">Наем на Pit Bike</h3>
+                    <p>Забавление на две гуми! Подготвяме за вас пит байкове под наем за незабравими емоции.</p>
+                    <a href="#" class="btn btn-secondary">Скоро</a>
+                </div>
+            </div>
+
+            <!-- Обучение път -->
+            <div class="card upcoming">
+                <div class="card-content">
+                    <span class="card-badge soon">Очаквайте скоро</span>
+                    <h3 class="card-title">Мото обучение на пътя</h3>
+                    <p>Подобрете техниката си на каране, безопасността и поведението си в реална градска и извънградска среда.</p>
+                    <a href="#" class="btn btn-secondary">Скоро</a>
+                </div>
+            </div>
+
+            <!-- Обучение писта -->
+            <div class="card upcoming">
+                <div class="card-content">
+                    <span class="card-badge soon">Очаквайте скоро</span>
+                    <h3 class="card-title">Мото обучение на писта</h3>
+                    <p>Научете се да контролирате мотора до лимита му в безопасна среда на затворено трасе с инструктор.</p>
+                    <a href="#" class="btn btn-secondary">Скоро</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Turtle Moto 6</h3>
+                <p>Вашият доверен партньор в съхранението, транспорта и управлението на мотоциклети. Ние се грижим за сигурността на вашия мотор.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p><strong>Телефон:</strong> +359 8XX XXX XXX</p>
+                <p><strong>Имейл:</strong> info@turtlemoto6.com</p>
+                <p><strong>Локация:</strong> България</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Turtle Moto 6. Всички права запазени.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
