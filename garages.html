@@ -77,6 +77,35 @@
             border-left: 4px solid var(--primary);
             padding-left: 10px;
         }
+        .garage-option {
+            padding: 4px 0 16px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .garage-option:last-of-type {
+            border-bottom: 0;
+        }
+        .garage-option h2 {
+            margin-top: 20px;
+        }
+        .garage-location {
+            margin-top: 8px;
+        }
+        .availability-badge {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .availability-badge.available {
+            background: #e6f4ea;
+            color: #137333;
+        }
+        .availability-badge.busy {
+            background: #fce8e6;
+            color: #b3261e;
+        }
         ul {
             margin-left: 20px;
             margin-bottom: 20px;
@@ -105,6 +134,14 @@
         .cta-box h3 {
             color: var(--primary);
             margin-bottom: 10px;
+        }
+        .cta-box p a {
+            color: #ff8a3d;
+            text-decoration: none;
+        }
+        .cta-box p a:hover {
+            color: white;
+            text-decoration: underline;
         }
         .cta-btn {
             display: inline-block;
@@ -137,12 +174,48 @@
         <div class="content-section">
             <a href="index.html" class="back-link">← Всички услуги</a>
             <h1>Гаражи и паркоместа</h1>
-            <p>Изберете подходящото място за автомобил или мотоциклет от нашите предложения:</p>
+            <p>Разгледайте нашите предложения за съхранение на автомобили и мотоциклети:</p>
 
-            <h2>2 коли или 7 мотора</h2>
-            <h2>Двойно закрито паркомясто</h2>
-            <h2>ВИП мото паркинг</h2>
-            <h2>Малък гараж на ниво „-2“</h2>
+            <section class="garage-option">
+                <h2>Голямото</h2>
+                <p><strong>Тип:</strong> Гараж</p>
+                <span class="availability-badge available">Свободен за цялостно наемане и споделен паркинг</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Пещерско шосе“, комплекс Level West</p>
+                <p><strong>Удобства:</strong> Ток, автоматична врата, интернет, видеонаблюдение</p>
+                <p><strong>Ориентировъчна цена:</strong> Споделено: 25–35 евро; цялото помещение: 160 евро</p>
+            </section>
+            <section class="garage-option">
+                <h2>Зад Сузуки</h2>
+                <p><strong>Тип:</strong> Паркомясто</p>
+                <span class="availability-badge busy">Зает</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Александър Стамболийски“, комплекс „Южен парк“</p>
+                <p><strong>Удобства:</strong> Ток, автоматична врата</p>
+                <p><strong>Ориентировъчна цена:</strong> 85 евро</p>
+            </section>
+            <section class="garage-option">
+                <h2>ВИП мото паркинг</h2>
+                <p><strong>Тип:</strong> Гараж</p>
+                <span class="availability-badge available">Свободен за цялостно наемане и споделен паркинг</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Пещерско шосе“, комплекс Level West</p>
+                <p><strong>Удобства:</strong> Ток, автоматична врата, интернет, видеонаблюдение</p>
+                <p><strong>Ориентировъчна цена:</strong> Споделено: 35–50 евро; цялото помещение: 110 евро</p>
+            </section>
+            <section class="garage-option">
+                <h2>Подземието</h2>
+                <p><strong>Тип:</strong> Гараж</p>
+                <span class="availability-badge busy">Зает</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, Център, ул. „Цар Георги Тертер“</p>
+                <p><strong>Удобства:</strong> Ток, автоматична врата, система против наводняване</p>
+                <p><strong>Ориентировъчна цена:</strong> 80 евро</p>
+            </section>
+            <section class="garage-option">
+                <h2>Стадиона</h2>
+                <p><strong>Тип:</strong> Гараж и паркомясто</p>
+                <span class="availability-badge busy">Зает</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, Стадион „Христо Ботев“</p>
+                <p><strong>Удобства:</strong> Партерен гараж и паркомясто, интернет, вода, вода с маркуч, мивка, топла вода, ток, зарядна станция за електромобили, видеонаблюдение, тоалетна</p>
+                <p><strong>Ориентировъчна цена:</strong> 370 евро</p>
+            </section>
 
             <div class="cta-box">
                 <h3>Запазете вашето място още днес</h3>

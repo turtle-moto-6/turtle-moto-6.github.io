@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наем на ремарке за мотори - Turtle Moto 6</title>
+    <title>Наем на ремарке Lorries MT-2 - Turtle Moto 6</title>
     <style>
         :root {
             --primary: #ff6600;
@@ -94,6 +94,45 @@
         li {
             margin-bottom: 8px;
         }
+        .trailer-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .trailer-gallery figure {
+            margin: 0;
+        }
+        .trailer-gallery img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .trailer-gallery figcaption {
+            margin-top: 6px;
+            color: #666;
+            font-size: 14px;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 25px;
+        }
+        .specs-table th, .specs-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        .specs-table th {
+            width: 65%;
+            font-weight: 600;
+        }
+        @media (max-width: 520px) {
+            .specs-table th, .specs-table td { padding: 8px 6px; }
+        }
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -115,6 +154,14 @@
         .cta-box h3 {
             color: var(--primary);
             margin-bottom: 10px;
+        }
+        .cta-box p a {
+            color: #ff8a3d;
+            text-decoration: none;
+        }
+        .cta-box p a:hover {
+            color: white;
+            text-decoration: underline;
         }
         .cta-btn {
             display: inline-block;
@@ -146,18 +193,53 @@
     <main class="container">
         <div class="content-section">
             <a href="index.html" class="back-link">← Всички услуги</a>
-            <h1>Наем на ремарке за мотори</h1>
+            <h1>Наем на ремарке Lorries MT-2 за мотори</h1>
             <span class="status-badge">Налично за наемане (1 брой)</span>
             
-            <p>Имате нужда да транспортирате мотора си до пистата, сервиза или за регистрация в КАТ? Нашето специализирано ремарке под наем е перфектното решение за сигурен транспорт.</p>
+            <p>Имате нужда да транспортирате мотора си до пистата, сервиза или за регистрация в КАТ? Нашето ремарке Lorries MT-2 е специализирано за сигурен транспорт на мотоциклети.</p>
+
+            <div class="trailer-gallery" aria-label="Снимки на ремаркето Lorries MT-2">
+                <figure>
+                    <img src="trailer/1/single%20bike.jpg" alt="Мотоциклет, укрепен върху ремарке Lorries MT-2">
+                    <figcaption>Транспорт на един мотоциклет</figcaption>
+                </figure>
+                <figure>
+                    <img src="trailer/1/two%20bikes.jpg" alt="Два мотоциклета, укрепени върху ремарке Lorries MT-2">
+                    <figcaption>Ремаркето с два мотоциклета</figcaption>
+                </figure>
+                <figure>
+                    <img src="trailer/1/factory%20image.jpg" alt="Фабрична снимка на ремарке Lorries MT-2">
+                    <figcaption>Модел Lorries MT-2</figcaption>
+                </figure>
+            </div>
             
-            <h2>Технически характеристики и предимства</h2>
+            <h2>Характеристики и предимства</h2>
             <ul>
+                <li><strong>Лесно товарене:</strong> Задната част на ремаркето се спуска до земята, така че не са необходими допълнителни рампи.</li>
+                <li><strong>Сгъваем дизайн:</strong> Благодарение на патентован механизъм ремаркето може да се сгъва наполовина или вертикално за съхранение.</li>
+                <li><strong>Различни конфигурации на оборудването:</strong> Предлагат се допълнителни аксесоари, като алуминиев обтекател и стойки за кросови мотоциклети и велосипеди.</li>
+                <li><strong>Подходящо и за ATV:</strong> Има възможност за товарене на ATV (четириколесно превозно средство).</li>
+                <li><strong>Подходящо и за триколесни мотоциклети:</strong> Ремаркето позволява товарене и на триколесен мотоциклет.</li>
                 <li><strong>Специализиран дизайн:</strong> Оборудвано със стойка/улей за стабилно фиксиране на предната гума.</li>
                 <li><strong>Сигурно укрепване:</strong> Налични точки за сигурно захващане с колани.</li>
+                <li><strong>Включени колани за укрепване:</strong> Колани с тресчотка и колан тип „белезници“ за кормилото.</li>
                 <li><strong>Лека и здрава конструкция:</strong> Лесно за теглене дори от по-малки леки автомобили (управлява се с Б категория).</li>
-                <li><strong>Изправни документи:</strong> Напълно изрядно ремарке, готово за път в страната.</li>
+                <li><strong>Изправни документи:</strong> Напълно изрядно ремарке, готово за път в и извън страната.</li>
             </ul>
+
+            <h2>Технически данни</h2>
+            <table class="specs-table">
+                <tbody>
+                    <tr><th scope="row">Допустима максимална маса [кг]</th><td>750</td></tr>
+                    <tr><th scope="row">Максимална дължина на товарната площ [мм]</th><td>2396</td></tr>
+                    <tr><th scope="row">Максимална ширина на товарната площ [мм]</th><td>1743</td></tr>
+                    <tr><th scope="row">Товароносимост [кг]</th><td>512</td></tr>
+                    <tr><th scope="row">Собствена маса [кг]</th><td>238</td></tr>
+                    <tr><th scope="row">Външни размери (ширина × дължина × височина) [мм]</th><td>2416 × 3534 × 956</td></tr>
+                    <tr><th scope="row">Брой оси</th><td>1</td></tr>
+                    <tr><th scope="row">Тип оси</th><td>Без спирачки</td></tr>
+                </tbody>
+            </table>
 
             <h2>Условия за наемане</h2>
             <p>Ремаркето може да се наеме за няколко часа, за дни или за седмици. При наемането се предоставят нужните документи за регистрация на ремаркето пред органите на реда.</p>
