@@ -90,6 +90,35 @@
         .garage-location {
             margin-top: 8px;
         }
+        .map-toggle {
+            margin-top: 14px;
+        }
+        .map-toggle summary {
+            display: inline-block;
+            padding: 9px 16px;
+            border-radius: 5px;
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+        }
+        .map-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+        .map-toggle summary:hover {
+            background: #e05500;
+        }
+        .map-toggle[open] summary {
+            margin-bottom: 10px;
+        }
+        .map-toggle iframe {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            border: 0;
+        }
         .availability-badge {
             display: inline-block;
             margin-top: 8px;
@@ -181,39 +210,63 @@
                 <p><strong>Тип:</strong> Гараж</p>
                 <span class="availability-badge available">Свободен за цялостно наемане и споделен паркинг</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Пещерско шосе“, комплекс Level West</p>
-                <p><strong>Удобства:</strong> Ток, автоматична врата, интернет, видеонаблюдение</p>
-                <p><strong>Ориентировъчна цена:</strong> Споделено: 25–35 евро; цялото помещение: 160 евро</p>
+                <p><strong>Удобства:</strong> ⚡ Ток, 🚪 Автоматична врата, 📶 Интернет, 📹 Видеонаблюдение, 🌊 Противонаводнителна система</p>
+                <p><strong>Ориентировъчна цена:</strong> Споделено: 25-35 евро и 50 евро за двойно място; цялото помещение: 160 евро</p>
+                <p><strong>Статус:</strong> В процес на изгаждане; приема се предварителна поръчка.</p>
+                <p><strong>Места:</strong> 7 до 9</p>
+
+                <details class="map-toggle"><summary>Покажи картата</summary>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </details>
             </section>
-            <section class="garage-option">
-                <h2>Зад Сузуки</h2>
-                <p><strong>Тип:</strong> Паркомясто</p>
-                <span class="availability-badge busy">Зает</span>
-                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Александър Стамболийски“, комплекс „Южен парк“</p>
-                <p><strong>Удобства:</strong> Ток, автоматична врата</p>
-                <p><strong>Ориентировъчна цена:</strong> 85 евро</p>
-            </section>
+
             <section class="garage-option">
                 <h2>ВИП мото паркинг</h2>
                 <p><strong>Тип:</strong> Гараж</p>
                 <span class="availability-badge available">Свободен за цялостно наемане и споделен паркинг</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Пещерско шосе“, комплекс Level West</p>
-                <p><strong>Удобства:</strong> Ток, автоматична врата, интернет, видеонаблюдение</p>
-                <p><strong>Ориентировъчна цена:</strong> Споделено: 35–50 евро; цялото помещение: 110 евро</p>
+                <p><strong>Удобства:</strong> ⚡ Ток, 🚪 Автоматична врата, 📶 Интернет, 📹 Видеонаблюдение, 🌊 Противонаводнителна система</p>
+                <p><strong>Ориентировъчна цена:</strong> Споделено: 35-55 евро; цялото помещение: 110 евро</p>
+                <p><strong>Статус:</strong> В процес на изграждане; приема се предварителна поръчка.</p>
+                <p><strong>Места:</strong> 3 до 4</p>
+
+                <details class="map-toggle"><summary>Покажи картата</summary>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </details>
             </section>
+
+            <section class="garage-option">
+                <h2>Зад Сузуки</h2>
+                <p><strong>Тип:</strong> Паркомясто</p>
+                <span class="availability-badge busy">Зает</span>
+                <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Александър Стамболийски“, комплекс „Южен парк“</p>
+                <p><strong>Удобства:</strong> 🚪 Автоматична врата</p>
+                <p><strong>Ориентировъчна цена:</strong> 85 евро</p>
+
+                <details class="map-toggle"><summary>Покажи картата</summary>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1188.372644718551!2d24.742060182089705!3d42.11641825114533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDA2JzU4LjEiTiAyNMKwNDQnMzIuNyJF!5e0!3m2!1sen!2sbg!4v1793040412486!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </details>
+            </section>
+
             <section class="garage-option">
                 <h2>Подземието</h2>
                 <p><strong>Тип:</strong> Гараж</p>
                 <span class="availability-badge busy">Зает</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, Център, ул. „Цар Георги Тертер“</p>
-                <p><strong>Удобства:</strong> Ток, автоматична врата, система против наводняване</p>
+                <p><strong>Размери:</strong> Ширина: 2,5 м, дължина: 5,4 м, широчина на вратата: 2,3 м</p>
+                <p><strong>Удобства:</strong> ⚡ Ток, 🚪 Автоматична врата, 🌊 Система против наводняване</p>
                 <p><strong>Ориентировъчна цена:</strong> 80 евро</p>
+
+                <details class="map-toggle"><summary>Покажи картата</summary>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.0899872002345!2d24.756307046974857!3d42.14599501687088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1a166f6b24f%3A0x862f53f09fbae50!2sHadzhi%20Hasan%20MahalaPlovdiv%20Center%2C%20ul.%20%22Tsar%20Georgi%20Terter%22%204%2C%204000%20Plovdiv!5e0!3m2!1sen!2sbg!4v1793040444951!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </details>
             </section>
             <section class="garage-option">
                 <h2>Стадиона</h2>
                 <p><strong>Тип:</strong> Гараж и паркомясто</p>
                 <span class="availability-badge busy">Зает</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, Стадион „Христо Ботев“</p>
-                <p><strong>Удобства:</strong> Партерен гараж и паркомясто, интернет, вода, вода с маркуч, мивка, топла вода, ток, зарядна станция за електромобили, видеонаблюдение, тоалетна</p>
+                <p><strong>Удобства:</strong> 🅿️ Партерен гараж и паркомясто, 📶 Интернет, 🚰 Вода, 🪴 Вода с маркуч, 🚿 Мивка, ♨️ Топла вода, ⚡ Ток, 🔌 Зарядна станция за електромобили, 📹 Видеонаблюдение, 🚻 Тоалетна</p>
                 <p><strong>Ориентировъчна цена:</strong> 370 евро</p>
             </section>
 
