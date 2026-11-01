@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мото обучение на пътя - Turtle Moto 6</title>
+    <style>
+        :root {
+            --primary: #ff6600;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --text: #333;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--light);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.65;
+        }
+        .site-header {
+            background: var(--dark);
+            border-bottom: 4px solid var(--primary);
+            padding: 16px 0;
+        }
+        .header-content, .container {
+            width: min(90%, 800px);
+            margin: 0 auto;
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #fff; text-decoration: none; font-size: 24px; font-weight: 700; }
+        .logo span { color: var(--primary); }
+        .header-back { color: #fff; text-decoration: none; font-weight: 500; }
+        .header-back:hover, .header-back:focus-visible { color: var(--primary); }
+        .container {
+            margin-top: 36px;
+            margin-bottom: 48px;
+            padding: clamp(22px, 5vw, 40px);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        }
+        .back-link { display: inline-block; margin-bottom: 18px; color: #a84300; font-weight: 700; text-decoration: none; }
+        .back-link:hover, .back-link:focus-visible { text-decoration: underline; }
+        h1 { margin: 0 0 18px; padding-bottom: 14px; color: var(--dark); border-bottom: 3px solid var(--primary); font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.25; }
+        h2 { margin: 32px 0 12px; padding-left: 12px; color: var(--dark); border-left: 4px solid var(--primary); font-size: 1.35rem; }
+        p { margin: 0 0 16px; }
+        .info-box, .legal-box { padding: 16px 18px; margin: 22px 0; border-radius: 6px; }
+        .info-box { background: #fff4eb; border-left: 5px solid var(--primary); }
+        .legal-box { background: #f8f5f1; border-left: 5px solid #8b6b52; font-size: .95rem; }
+        .mentor-card {
+            margin: 18px 0 28px;
+            padding: clamp(18px, 4vw, 26px);
+            border-left: 5px solid var(--primary);
+            border-radius: 8px;
+            background: var(--dark);
+            color: #f5f5f5;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, .12);
+        }
+        .mentor-card p { margin: 0 0 16px; font-size: 1.05rem; }
+        .mentor-credentials { margin: 0; padding: 0; list-style: none; }
+        .mentor-credentials li { margin: 10px 0 0; padding-left: 28px; position: relative; }
+        .mentor-credentials li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 12px; padding-left: 3px; }
+        .footer-contacts { margin-top: 30px; padding-top: 22px; border-top: 1px solid #e5e5e5; }
+        .footer-contacts h3 { margin: 0 0 10px; color: var(--dark); }
+        .btn-contact { display: inline-block; margin-top: 4px; padding: 12px 20px; border-radius: 5px; background: var(--primary); color: #fff; font-weight: 700; text-decoration: none; transition: background .2s ease; }
+        .btn-contact:hover, .btn-contact:focus-visible { background: #e05500; }
+        :focus-visible { outline: 3px solid #1a73e8; outline-offset: 3px; }
+        @media (max-width: 520px) {
+            .header-content { align-items: flex-start; gap: 10px; flex-direction: column; }
+            .container { margin-top: 20px; }
+            .info-box, .legal-box { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-content">
+        <a href="index.html" class="logo">Turtle Moto <span>6</span></a>
+        <a class="header-back" href="index.html">← Назад към началото</a>
+    </div>
+</header>
+
+<div class="container">
+    <h1>🛣️ Индивидуално мото менторство и обучение на пътя</h1>
+    <p>Имаш шофьорска книжка, но изпитваш несигурност при излизане на извънградско каране? Искаш да подобриш линиите си в завоите, позицията на тялото и умението да предвиждаш опасностите на пътя? Ние предлагаме персонализирано споделено каране с обратна връзка в реално време.</p>
+
+    <!-- Блок за шофьорската книжка и легалност -->
+    <div class="info-box">
+        <strong>❓ Нужна ли ми е специална подготовка?</strong><br>
+        Не, услугата е насочена към мотористи, които вече притежават валидна правоспособност за съответния мотоциклет (Категория А, А2 или А1). Тъй като се движим по обществената пътна мрежа, вие сте напълно легален водач, който подобрява уменията си в реална среда.
+    </div>
+
+    <h2>Твоят ментор на пътя</h2>
+    <div class="info-box">
+        <p>
+            Карането с мен не е просто "разходка с приятел". Теорията и практиката, които споделям с теб, са базирани на сертифицирани международни методологии за безопасност и контрол над мотора.
+        </p>
+        <ul class="mentor-credentials">
+            <li><strong>Сертифициран за преминато обучение в California Superbike School (Level 2)</strong></li>
+            <li><strong>Преминал специализирани обучения в DOXA Racing Academy</strong></li>
+            <li><strong>Сертификат за обучение в
+                <a href="https://ridelikeachampion.com/certificates/champions-habits-the-core-curriculum/?course_id=6307&cert-nonce=ef2229938d"
+                target="_blank">
+                    Yamaha Champions Riding School
+                </a></strong></li>
+        </ul>
+    </div>
+
+    <h2>Как протича менторството?</h2>
+    <ul>
+        <li><strong>Постоянен гласов контакт:</strong> Караме с висококласни <strong>интерком системи <a href="https://cardosystems.com/" target="_blank">cardo</a></strong>. Ще получаваш насоки за позиция, спиране и траектория директно в каската си, докато караме.</li>
+        <li><strong>Анализ на реални ситуации:</strong> Карам пред или зад теб по предварително избрани междуградски маршрути с разнообразни завои и настилки.</li>
+        <li><strong>Видео анализ:</strong> Използваме екшън камера, ще можем да преглеждаме кадрите по време на почивките. Да се видиш отстрани често помага да осъзнаеш позицията си на мотора и прави обратната връзка много по-конкретна.</li>
+        <li><strong>Маршрут според нивото:</strong> Избираме готов маршрут спрямо опита и увереността ти — например „Маршрут за абсолютно начинаещи“ с лежерно каране и без големи денивелации или „Маршрут за напреднали“ през планински проход с остри завои.</li>
+        <li><strong>Конструктивна обратна връзка:</strong> На всяка почивка спираме, анализираме детайлно карането ти и получаваш ясни съвети какво и как да коригираш веднага.</li>
+        <li><strong>Консултация за твоя мотор:</strong> Като бонус или допълнителна услуга можем да прегледаме ергономиката на мотоциклета ти — настройката на лостчетата за спирачка и съединител, налягането в гумите и позицията ти върху мотора.</li>
+        <li><strong>Пълна екипировка:</strong> Сигурността е на първо място. Задължително е присъствието с пълна защитна мото екипировка (каска, яке, ръкавици, затворени обувки).</li>
+    </ul>
+
+    <!-- Правна защита и декларация за споделена отговорност -->
+    <div class="legal-box">
+        <strong>⚠️ Условия за безопасност и споделена отговорност:</strong><br>
+        Услугата се извършва под формата на частна консултация и споделено каране.
+        Преди тръгване всеки участник задължително подписва <em>Декларация за отговорност</em>, потвърждаваща че управлява собствения си изправен мотоциклет, спазвайки Закона за движение по пътищата (ЗДвП).
+        Всички насоки по интеркома имат само препоръчителен характер.
+    </div>
+
+    <div class="footer-contacts">
+        <a href="contacts.html" class="btn-contact">Запази своя час за каране още днес</a>
+    </div>
+</div>
+
+</body>
+</html>
