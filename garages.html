@@ -77,6 +77,51 @@
             border-left: 4px solid var(--primary);
             padding-left: 10px;
         }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .footer-about h3, .footer-contact h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .footer-contact h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .footer-contact h3 a:hover {
+            text-decoration: underline;
+        }
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+        .footer-contact a {
+            color: #ff8a3d;
+            text-decoration: none;
+        }
+        .footer-contact a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid var(--gray);
+            font-size: 14px;
+            color: #aaa;
+        }
+
         .garage-option {
             padding: 4px 0 16px;
             border-bottom: 1px solid #e5e5e5;
@@ -196,16 +241,7 @@
         li {
             margin-bottom: 8px;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
+
         .cta-box {
             background-color: var(--dark);
             color: white;
@@ -267,7 +303,7 @@
                 <p><strong>Тип:</strong> Гараж</p>
                 <span class="availability-badge available">В процес на изграждане; приема се предварителна поръчка.</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Пещерско шосе“, комплекс Level West</p>
-                <p><strong>Размери:</strong> Ширина: 2,34-2,78м, дължина: 10,63 м, широчина на вратата: 2,37, височина на вратата: 1.86м</p>
+                <p><strong>Размери:</strong> Ширина: 2,34-2,78м, дължина: 10,63м, широчина на вратата: 2,37м, височина на вратата: 1.86м</p>
                 <p><strong>Удобства:</strong> ⚡ Ток, 🚪 Автоматична врата, 📶 Интернет, 📹 Видеонаблюдение, 🌊 Противонаводнителна система</p>
                 <p><strong>Ориентировъчна цена:</strong> Споделено: 25-35 евро и 50 евро за двойно място; цялото помещение: 160 евро</p>
                 <p><strong>Места:</strong> 7 до 9</p>
@@ -275,7 +311,9 @@
                 <details class="map-toggle"><summary><span class="show-map">▶ Покажи картата</span><span class="hide-map">▼ Скрий картата</span></summary>
                     <iframe
                             loading="lazy"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg"
+                            allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                 </details>
             </section>
@@ -299,7 +337,9 @@
                 <details class="map-toggle"><summary><span class="show-map">▶ Покажи картата</span><span class="hide-map">▼ Скрий картата</span></summary>
                     <iframe
                             loading="lazy"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11835.711878555163!2d24.712667597553533!3d42.13042523968831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14accf0078e9b437%3A0x6129bf05e740d23e!2sLEVEL%20WEST!5e0!3m2!1sen!2sbg!4v1793040258754!5m2!1sen!2sbg"
+                            allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                 </details>
             </section>
@@ -307,14 +347,17 @@
             <section class="garage-option">
                 <h2>Зад Сузуки</h2>
                 <p><strong>Тип:</strong> Паркомясто</p>
-                <span class="availability-badge busy">Зает</span>
+                <span class="availability-badge busy">Заето</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, бул. „Александър Стамболийски“, комплекс „Южен парк“</p>
                 <p><strong>Удобства:</strong> 🚪 Автоматична врата</p>
                 <p><strong>Ориентировъчна цена:</strong> 85 евро</p>
 
                 <details class="map-toggle"><summary><span class="show-map">▶ Покажи картата</span><span class="hide-map">▼ Скрий картата</span></summary>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1188.372644718551!2d24.742060182089705!3d42.11641825114533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDA2JzU4LjEiTiAyNMKwNDQnMzIuNyJF!5e0!3m2!1sen!2sbg!4v1793040412486!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1188.372644718551!2d24.742060182089705!3d42.11641825114533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDA2JzU4LjEiTiAyNMKwNDQnMzIuNyJF!5e0!3m2!1sen!2sbg!4v1793040412486!5m2!1sen!2sbg"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                 </details>
             </section>
@@ -336,12 +379,13 @@
                 <details class="map-toggle"><summary><span class="show-map">▶ Покажи картата</span><span class="hide-map">▼ Скрий картата</span></summary>
                     <iframe
                             loading="lazy"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.0899872002345!2d24.756307046974857!3d42.14599501687088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1a166f6b24f%3A0x862f53f09fbae50!2sHadzhi%20Hasan%20MahalaPlovdiv%20Center%2C%20ul.%20%22Tsar%20Georgi%20Terter%22%204%2C%204000%20Plovdiv!5e0!3m2!1sen!2sbg!4v1793040444951!5m2!1sen!2sbg" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.0899872002345!2d24.756307046974857!3d42.14599501687088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1a166f6b24f%3A0x862f53f09fbae50!2sHadzhi%20Hasan%20MahalaPlovdiv%20Center%2C%20ul.%20%22Tsar%20Georgi%20Terter%22%204%2C%204000%20Plovdiv!5e0!3m2!1sen!2sbg!4v1793040444951!5m2!1sen!2sbg"
+                            referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                 </details>
             </section>
             <section class="garage-option">
-                <h2>Стадиона</h2>
+                <h2>Стадионът</h2>
                 <p><strong>Тип:</strong> Гараж и паркомясто</p>
                 <span class="availability-badge busy">Зает</span>
                 <p class="garage-location"><strong>Локация:</strong> гр. Пловдив, Стадион „Христо Ботев“</p>
@@ -361,17 +405,17 @@
                 </div>
                 <div class="faq-item">
                     <h3>Мога ли да ремонтирам мотора си в гаража?</h3>
-                    <p class="faq-answer"><strong>Отговор:</strong>Да - при наемане на цял гараж. При споделено място - свържи се с нас за детайли.</p>
+                    <p class="faq-answer"><strong>Отговор:</strong> Да - при наемане на цял гараж. При споделено място - свържи се с нас за детайли.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>Има ли възможност за поддържане на акумулатора през зимата?</h3>
-                    <p class="faq-answer"><strong>Отговор:</strong>Да, за гаражи маркирани с екстра ⚡ Ток</p>
+                    <p class="faq-answer"><strong>Отговор:</strong> Да, за гаражи маркирани с екстра ⚡ Ток</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>Има ли минимален период за наемане?</h3>
-                    <p class="faq-answer"><strong>Отговор:</strong>Един месец за споделен гараж, 5 дни за цял гараж</p>
+                    <p class="faq-answer"><strong>Отговор:</strong> Един месец за споделен гараж, 5 дни за цял гараж</p>
                 </div>
 
                 <div class="faq-item">
@@ -432,13 +476,29 @@
             </section>
 
             <div class="cta-box">
-                <h3>Запазете вашето място още днес</h3>
-                <p>Свържете се с нас за цени и наличност.</p>
-                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61594601897443" target="_blank" rel="noopener noreferrer">Посетете нашата страница</a></p>
-                <a href="contacts.html" class="cta-btn">Свържи се с нас</a>
+                <a href="contacts.html" class="cta-btn">Свържете се с нас за цени и наличност</a>
             </div>
         </div>
     </main>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Turtle Moto 6</h3>
+                <p>Вашият доверен партньор в съхранението, транспорта и управлението на мотоциклети. Ние се грижим за сигурността на вашия мотор.</p>
+            </div>
+            <div class="footer-contact">
+                <h3><a href="contacts.html">Контакти</a></h3>
+                <p><strong>Телефон:</strong> <a href="tel:+359899287902">+359 899 287 902</a></p>
+                <p><strong>Viber:</strong> <a href="viber://chat?number=%2B359899287902">+359 899 287 902</a></p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61594601897443" target="_blank" rel="noopener noreferrer">Посетете нашата страница</a></p>
+                <p><strong>Локация:</strong> България, Пловдив</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Turtle Moto 6. Всички права запазени.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

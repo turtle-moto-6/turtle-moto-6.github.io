@@ -41,6 +41,49 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,.08);
         }
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .footer-about h3, .footer-contact h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .footer-contact h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .footer-contact h3 a:hover {
+            text-decoration: underline;
+        }
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+        .footer-contact a {
+            color: #ff8a3d;
+            text-decoration: none;
+        }
+        .footer-contact a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid var(--gray);
+            font-size: 14px;
+            color: #aaa;
+        }
         h1 { margin: 0 0 18px; padding-bottom: 14px; color: var(--dark); border-bottom: 3px solid var(--primary); font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.25; }
         h2 { margin: 32px 0 12px; padding-left: 12px; color: var(--dark); border-left: 4px solid var(--primary); font-size: 1.35rem; }
         p { margin: 0 0 16px; }
@@ -190,6 +233,25 @@
         <a href="contacts.html" class="btn-contact">Запази своя час за каране още днес</a>
     </div>
 </div>
+
+<footer id="contact">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <h3>Turtle Moto 6</h3>
+            <p>Вашият доверен партньор в съхранението, транспорта и управлението на мотоциклети. Ние се грижим за сигурността на вашия мотор.</p>
+        </div>
+        <div class="footer-contact">
+            <h3><a href="contacts.html">Контакти</a></h3>
+            <p><strong>Телефон:</strong> <a href="tel:+359899287902">+359 899 287 902</a></p>
+            <p><strong>Viber:</strong> <a href="viber://chat?number=%2B359899287902">+359 899 287 902</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61594601897443" target="_blank" rel="noopener noreferrer">Посетете нашата страница</a></p>
+            <p><strong>Локация:</strong> България, Пловдив</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Turtle Moto 6. Всички права запазени.</p>
+    </div>
+</footer>
 
 </body>
 </html>
